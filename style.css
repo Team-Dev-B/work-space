@@ -1,1 +1,7 @@
-
+body {
+  background-image: url(https://illust-ryokka.jp/wp-content/uploads/2022/05/Emphasis-14.png);
+  background-size: cover;
+}
+img.omikuji {
+  width: 200px;
+}

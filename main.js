@@ -237,16 +237,22 @@ class Omikuji {
 function goToOmikujiPage(omikuji) {
   displayNone(config.topPage);
   displayBlock(config.omikujiPage);
+  config.omikujiPage.innerHTML = '';
   config.omikujiPage.append(createOmikujiPage(omikuji));
 }
 
 // トップページに戻る関数
-
 function backToTopPage() {
   displayNone(config.omikujiPage);
   displayBlock(config.topPage);
   config.omikujiPage.innerHTML = '';
 }
+// おみくじを引く関数
+function drawOmikuji() {
+  let omikuji = new Omikuji();
+  goToOmikujiPage(omikuji);
+}
+
 // おみくじページの内容を生成する関数
 function createOmikujiPage(omikuji) {
   const container = document.createElement('div');

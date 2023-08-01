@@ -1,7 +1,91 @@
+/* 著作権表示のスタイル */
+#copyright {
+  font-size: 0.6rem;
+}
+
+/* 備考のスタイル */
+#remarks {
+  font-size: 0.8rem;
+  color: inherit;
+}
+
+/* ページ全体の背景 */
 body {
   background-image: url(https://illust-ryokka.jp/wp-content/uploads/2022/05/Emphasis-14.png);
   background-size: cover;
 }
 img.omikuji {
   width: 200px;
+}
+
+/* 箇条書きリストのスタイル */
+ul {
+  list-style-type: square;
+  padding-inline-start: 2rem;
+  margin: 0;
+}
+
+/* 角丸のスタイル */
+.rounded-pill {
+  border-radius: 50rem;
+}
+
+/* マーカー（箇条書き記号）のスタイル */
+::marker {
+  color: #dc3545!important;
+}
+
+/* 横スクロールのスタイル */
+.overflow-scroll {
+  overflow: scroll;
+}
+
+
+/* おみくじコンテナのスタイル */
+.omikuji {
+  width: 280px;
+  height: auto;
+  border: thick double #ff0000;
+  outline: 0.2rem solid #ff0000;
+}
+
+/* イラストのスタイル */
+.illust {
+  width: 260px;
+}
+
+/* おみくじ画像のスタイル */
+img.omikuji {
+  width: 200px;
+}
+
+/* 運勢表示のスタイル */
+.fortune {
+  font-size: 5rem;
+}
+
+/* 赤い線のスタイル */
+.line-red {
+  border-top: 2px solid #ff0000;
+  width: 260px;
+}
+
+/* カスタムフォント「Yuji Syuku」を適用するスタイル */
+.yuji-syuku {
+  font-family: 'Yuji Syuku', serif;
+}
+
+/* リンクのスタイル */
+a {
+  text-decoration: none;
+}
+
+/* リンクにホバーした際のスタイル */
+a:hover {
+  text-decoration: none;
+}
+
+/* リンクを訪れた後のスタイル */
+a:visited {
+  text-decoration: none;
 }

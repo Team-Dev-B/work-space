@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>おみくじ結果</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="pt-5 d-flex justify-content-center">
+      <div class="col-3 text-center">
+        <h1>おみくじ結果</h1>
+        <!-- おみくじ結果を表示する要素 -->
+        <div class="result mt-3"></div>
+        <!-- ホームに戻るボタン -->
+        <button type="button" class="btn btn-danger mb-5" onclick="backToHome()">
+          ホームに戻る
+        </button>
+        <br />
+        <a href="about.html">このおみくじについて</a>|
+        <a href="developers.html">開発者一覧</a>
+        <p class="mt-3">©ソフトウェア開発みくじ</p>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+  <script>
+
+    // ページがロードされた時に実行する処理
+    window.onload = function () {
+      // ホームに戻るボタンを取得してクリックイベントを追加
+      const backButton = document.querySelector('.btn-danger');
+      backButton.addEventListener('click', backToHome);
+    };
+  </script>
+  <script>
+    // ボタンをクリックしたときに元のページに戻る関数
+    function backToHome() {
+      window.location.href = "index.html";
+    }
+  </script>
+  
+</body>
+
+</html>

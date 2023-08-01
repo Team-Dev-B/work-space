@@ -1,46 +1,60 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>このおみくじについて</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <div class="pt-5 d-flex justify-content-center">
-        <div class="col-3">
-          <div class="card" style="width: 18rem">
-            <div class="card-body">
-              <h4>このおみくじについて</h4>
-              <p>
-                🟥このおみくじは、コンピュータ・サイエンスの学習プラットフォーム
-                <a href="https://recursionist.io/">Recursion</a>
-                で開催されているイベント「チーム開発体験会」の課題として制作されたものです。
-              </p>
-              <p>🟥あなたのソフトウェア開発の行方を占います。</p>
-              <p>
-                🟥「チーム開発体験会」が催される度におみくじの種類が増えてゆきますので、納得しかねるおみくじを引いてしまっても懲りずにまた引きに来るのが吉です。
-              </p>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>このおみくじについて</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="pt-5 d-flex justify-content-center">
+      <div class="col-3">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h4>このおみくじについて</h4>
+            <p>
+              🟥このおみくじは、コンピュータ・サイエンスの学習プラットフォーム
+              <a href="https://recursionist.io/">Recursion</a>
+              で開催されているイベント「チーム開発体験会」の課題として制作されたものです。
+            </p>
+            <p>🟥あなたのソフトウェア開発の行方を占います。</p>
+            <p>
+              🟥「チーム開発体験会」が催される度におみくじの種類が増えてゆきますので、納得しかねるおみくじを引いてしまっても懲りずにまた引きに来るのが吉です。
+            </p>
           </div>
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="d-flex justify-content-center text-center">
-        <div class="col-3 ml-5">
-          <button type="button" class="btn btn-danger mt-3 mb-3">戻る</button>
-          <p>©ソフトウェア開発みくじ</p>
-        </div>
+  </div>
+  <div class="container">
+    <div class="d-flex justify-content-center text-center">
+      <div class="col-3 ml-5">
+        <button type="button" class="btn btn-danger mt-3 mb-3">戻る</button>
+        <p>©ソフトウェア開発みくじ</p>
       </div>
     </div>
-  </body>
+  </div>
+  <script src="main.js"></script>
+  <script>
+    // ホーム画面に戻る関数
+    function backToHome() {
+      window.location.href = "index.html";
+    }
+
+    // ページがロードされた時に実行する処理
+    window.onload = function () {
+      // ホームに戻るボタンを取得してクリックイベントを追加
+      const backButton = document.querySelector('.btn-danger');
+      backButton.addEventListener('click', backToHome);
+    };
+  </script>
+
+</body>
+
 </html>

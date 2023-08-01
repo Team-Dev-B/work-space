@@ -15,13 +15,16 @@
 
 <body>
   <div class="container">
-    <div class="pt-5 d-flex justify-content-center">
+    <div id="home" class="pt-5 d-flex justify-content-center">
       <div class="col-3 text-center">
         <h1>ソフトウェア開発みくじ</h1>
         <img src="https://acha0203.github.io/SW_Dev_Omikuji/images/syougatsu2_omijikuji2.png" class="omikuji m-5"
           alt="おみくじ画像" />
         <br />
-        <button type="button" class="btn btn-danger mb-5">
+        <!-- おみくじ結果を表示する要素 -->
+        <div class="result mt-3"></div>
+        <!-- おみくじを引くボタン -->
+        <button type="button" class="btn btn-danger mb-5" onclick="showResult()">
           おみくじを引く
         </button>
         <br />
@@ -30,10 +33,25 @@
         <p class="mt-3">©ソフトウェア開発みくじ</p>
       </div>
     </div>
+    <!-- おみくじの結果を表示する要素 -->
+    <div id="result" class="d-none"></div>
   </div>
   <script src="main.js"></script>
   <!-- random.jsを読み込む -->
   <script src="random.js"></script>
+  <!-- 以下のscriptタグの部分を修正 -->
+  <script>
+    // ページがロードされた時に実行する処理
+    window.onload = function () {
+      // おみくじを引くボタンを取得してクリックイベントを追加
+      const drawButton = document.querySelector('.btn-danger');
+      drawButton.addEventListener('click', function () {
+        // おみくじを引くボタンがクリックされた時の処理を書く
+        showResult();
+      });
+    };
+  </script>
+
 </body>
 
 </html>

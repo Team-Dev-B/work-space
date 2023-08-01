@@ -19,11 +19,19 @@ const elements = {
 // おみくじ結果を表示する関数
 function showResult() {
   const omikujiData = randomSet();
-  hideElement(elements.home);
-  showElement(elements.result);
-  elements.result.innerHTML = '';
-  elements.result.append(createResultElement(omikujiData));
+  // 新しいHTMLファイルに遷移しておみくじ結果を表示
+  const resultHTML = createResultElement(omikujiData);
+  const resultWindow = window.open("", "_blank");
+  resultWindow.document.write(resultHTML.outerHTML);
+
+  // 新しいページでの「戻る」ボタンをクリックしたときの処理を追加
+  const backButton = resultWindow.document.querySelector('.btn-danger');
+  backButton.addEventListener('click', function () {
+    resultWindow.close(); // 新しいページを閉じる
+    backToHome(); // 元のページに戻る
+  });
 }
+
 
 // ホーム画面に戻る関数
 function backToHome() {
@@ -32,11 +40,15 @@ function backToHome() {
   elements.result.innerHTML = '';
 }
 
+// おみくじを引くボタンのクリックイベントを追加
+document.querySelector('.btn-danger').addEventListener('click', function () {
+  showResult();
+});
+
 // おみくじ結果の要素を作成する関数
 function createResultElement(omikujiData) {
   const container = document.createElement('div');
   container.classList.add('overflow-scroll', 'p-2');
-
   const contentWrapper = document.createElement('div');
   contentWrapper.classList.add(
     'd-flex',
@@ -44,6 +56,9 @@ function createResultElement(omikujiData) {
     'justify-content-center',
     'align-items-center',
     'flex-column'
+   // 以下の行を追加して、生成した要素を返す
+   
+
   );
 
   const omikuji = document.createElement('div');
@@ -114,5 +129,5 @@ function createResultElement(omikujiData) {
 
   contentWrapper.append(container);
   container.append(omikuji);
-  return contentWrapper;
+  return contentWrapper; // 追加：生成した要素を返す
 }

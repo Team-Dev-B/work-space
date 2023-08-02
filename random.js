@@ -24,5 +24,33 @@ const messsage = {
 };
 
 //ラッキー言語
+const luckyLanguage = {
+    "Java",
+    "JavaScript",
+    "TypeScript",
+    "Ruby",
+    "C++",
+    "C#",
+    "Python",
+    "PHP",
+}
 //ラッキーデータベース
+const luckyDB = { 
+    "MongoDB",
+    "MySQL",
+    "PostgreSQL",
+    "SQLite",
+    "DynamoDB",
+    "Oracle Database",
+}
+
 //ラッキーエディタ
+const luckyEditor = {
+    "Sublime",
+    "Atom",
+    "Visual Studio Code",
+    "Xcode",
+    "Eclipse",
+    "Vim",
+    "Emacs",
+}
